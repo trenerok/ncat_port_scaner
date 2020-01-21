@@ -7,7 +7,7 @@ PORT_FROM=$2
 PORT_TO=$3
 
 
-for IP in $(seq 15 17); do
+for IP in $(seq 1 254); do
 	        echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 			echo "START scanning - $SUBNET.$IP"
             for PORT in $(seq $2 $3); do
