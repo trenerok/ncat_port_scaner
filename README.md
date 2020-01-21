@@ -1,1 +1,1 @@
-# bash ncat port scaner
+# bash ncat port scanner
