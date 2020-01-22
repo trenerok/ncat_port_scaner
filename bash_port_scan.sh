@@ -19,6 +19,7 @@ for IP in $(seq 1 254); do
                then
                    :
                else
+	          echo "$RESULT"
                   echo "$RESULT" >> "$FILENAME"
             fi
             done
