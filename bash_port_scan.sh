@@ -13,7 +13,7 @@ for IP in $(seq 1 254); do
 		        echo "START scanning - $SUBNET.$IP"
 			echo "START scanning - $SUBNET.$IP" >> "$FILENAME"
             for PORT in $(seq $2 $3); do
-            #echo "scanning - $SUBNET.$IP $PORT"
+            echo "scanning - $SUBNET.$IP $PORT"
             RESULT=`./ncat -nv -w 1 -i 1 $SUBNET.$IP $PORT 2>&1 | grep Connected`
 	    if [ -z "$RESULT" ]
                then
