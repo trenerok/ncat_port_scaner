@@ -10,6 +10,7 @@ FILENAME=result_ncat_scan_$1.log
 
 for IP in $(seq 1 254); do
 	        echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> "$FILENAME"
+		        echo "START scanning - $SUBNET.$IP"
 			echo "START scanning - $SUBNET.$IP" >> "$FILENAME"
             for PORT in $(seq $2 $3); do
             #echo "scanning - $SUBNET.$IP $PORT"
@@ -21,6 +22,7 @@ for IP in $(seq 1 254); do
                   echo "$RESULT" >> "$FILENAME"
             fi
             done
+	    echo "FINISH scanning - $SUBNET.$IP"
             echo "FINISH scanning - $SUBNET.$IP" >> "$FILENAME"
 done
 echo "done" >> "$FILENAME"
